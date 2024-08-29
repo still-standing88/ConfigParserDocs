@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API Documentation &mdash; ConfigParser  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Examples" href="examples.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ConfigParser
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#_CPPv412ConfigParser"><code class="docutils literal notranslate"><span class="pre">ConfigParser</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N12ConfigParser10SectionMapE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::SectionMap</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N12ConfigParser10LineVectorE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::LineVector</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N12ConfigParser8ValueMapE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ValueMap</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N12ConfigParser12StringVectorE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::StringVector</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N12ConfigParser8KeysIterE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::KeysIter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N12ConfigParser13ConstKeysIterE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConstKeysIter</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N12ConfigParser11ConfigErrorE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigError</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser11ConfigError14FILE_NOT_FOUNDE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigError::FILE_NOT_FOUND</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser11ConfigError15FILE_OPEN_ERRORE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigError::FILE_OPEN_ERROR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser11ConfigError15FILE_READ_ERRORE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigError::FILE_READ_ERROR</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser11ConfigError8NO_ERRORE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigError::NO_ERROR</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N12ConfigParser10ConfigTypeE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigType</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser10ConfigType17CONFIG_EMPTY_LINEE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigType::CONFIG_EMPTY_LINE</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser10ConfigType14CONFIG_COMMENTE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigType::CONFIG_COMMENT</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser10ConfigType14CONFIG_SECTIONE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigType::CONFIG_SECTION</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser10ConfigType12CONFIG_VALUEE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigType::CONFIG_VALUE</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4I0EN12ConfigParser4findEiRKNSt6vectorI9element_tEERK9element_t"><code class="docutils literal notranslate"><span class="pre">ConfigParser::find()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4I0EN12ConfigParser13removeElementEvRNSt6vectorI9element_tEERK9element_t"><code class="docutils literal notranslate"><span class="pre">ConfigParser::removeElement()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N12ConfigParser9CfgParserE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::CfgParser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser9CfgParser9CfgParserENSt6stringE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::CfgParser::CfgParser()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser9CfgParserD0Ev"><code class="docutils literal notranslate"><span class="pre">ConfigParser::CfgParser::~CfgParser()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser9CfgParser10addSectionENSt6stringE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::CfgParser::addSection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser9CfgParser13removeSectionERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::CfgParser::removeSection()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser9CfgParser7sectionERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::CfgParser::section()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser9CfgParser8sectionsEv"><code class="docutils literal notranslate"><span class="pre">ConfigParser::CfgParser::sections()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser9CfgParser5clearEv"><code class="docutils literal notranslate"><span class="pre">ConfigParser::CfgParser::clear()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N12ConfigParser10ConfigLineE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigLine</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N12ConfigParser13ConfigSectionE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigSection</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4I0EN12ConfigParser13ConfigSection6insertEvNSt6stringE10value_type"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigSection::insert()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser13ConfigSection3popERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigSection::pop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser13ConfigSection6removeERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigSection::remove()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4I0EN12ConfigParser13ConfigSection6updateEvRKNSt6stringE10value_type"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigSection::update()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser13ConfigSection6existsERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigSection::exists()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser13ConfigSection5clearEv"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigSection::clear()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser13ConfigSection3getERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigSection::get()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N12ConfigParser11ConfigValueE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::ConfigValue</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N12ConfigParser9IniParserE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::IniParser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4I0EN12ConfigParser9IniParser6insertEvNSt6stringE10value_type"><code class="docutils literal notranslate"><span class="pre">ConfigParser::IniParser::insert()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser9IniParser3popERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::IniParser::pop()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser9IniParser6removeERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::IniParser::remove()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser9IniParser5clearEv"><code class="docutils literal notranslate"><span class="pre">ConfigParser::IniParser::clear()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv4N12ConfigParser6ParserE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::Parser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK12ConfigParser6Parser7getPathEv"><code class="docutils literal notranslate"><span class="pre">ConfigParser::Parser::getPath()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4NK12ConfigParser6Parser8getErrorEv"><code class="docutils literal notranslate"><span class="pre">ConfigParser::Parser::getError()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser6Parser5flushEv"><code class="docutils literal notranslate"><span class="pre">ConfigParser::Parser::flush()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser6Parser4loadENSt6stringE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::Parser::load()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser6Parser6reloadEv"><code class="docutils literal notranslate"><span class="pre">ConfigParser::Parser::reload()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#_CPPv4N12ConfigParser6Parser4saveENSt6stringE"><code class="docutils literal notranslate"><span class="pre">ConfigParser::Parser::save()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ConfigParser</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-documentation">
+<h1>API Documentation<a class="headerlink" href="#api-documentation" title="Link to this heading"></a></h1>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv412ConfigParser">
+<span id="_CPPv312ConfigParser"></span><span id="_CPPv212ConfigParser"></span><span id="ConfigParser"></span><span class="target" id="namespace_config_parser"></span><span class="k"><span class="pre">namespace</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConfigParser</span></span></span><a class="headerlink" href="#_CPPv412ConfigParser" title="Link to this definition"></a><br /></dt>
+<dd><p><a class="reference internal" href="#namespace_config_parser"><span class="std std-ref">ConfigParser</span></a> namespace. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-typedefs">Typedefs</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser10SectionMapE">
+<span id="_CPPv3N12ConfigParser10SectionMapE"></span><span id="_CPPv2N12ConfigParser10SectionMapE"></span><span id="ConfigParser::SectionMap"></span><span class="target" id="namespace_config_parser_1abecbdbf6db2e0932c4fbc6a2cdaccf48"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12ConfigParser13ConfigSectionE" title="ConfigParser::ConfigSection"><span class="n"><span class="pre">ConfigSection</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SectionMap</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser10SectionMapE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser10LineVectorE">
+<span id="_CPPv3N12ConfigParser10LineVectorE"></span><span id="_CPPv2N12ConfigParser10LineVectorE"></span><span id="ConfigParser::LineVector"></span><span class="target" id="namespace_config_parser_1a5eab99520dcc3076b7081d77c99000f9"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N12ConfigParser10ConfigLineE" title="ConfigParser::ConfigLine"><span class="n"><span class="pre">ConfigLine</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">LineVector</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser10LineVectorE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser8ValueMapE">
+<span id="_CPPv3N12ConfigParser8ValueMapE"></span><span id="_CPPv2N12ConfigParser8ValueMapE"></span><span id="ConfigParser::ValueMap"></span><span class="target" id="namespace_config_parser_1aab2c0a3f2cba3db55970f1fe37055e64"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12ConfigParser11ConfigValueE" title="ConfigParser::ConfigValue"><span class="n"><span class="pre">ConfigValue</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ValueMap</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser8ValueMapE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser12StringVectorE">
+<span id="_CPPv3N12ConfigParser12StringVectorE"></span><span id="_CPPv2N12ConfigParser12StringVectorE"></span><span id="ConfigParser::StringVector"></span><span class="target" id="namespace_config_parser_1a0329d2e1de4b15ca65690f83f4b8d97b"></span><span class="k"><span class="pre">typedef</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">StringVector</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser12StringVectorE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser8KeysIterE">
+<span id="_CPPv3N12ConfigParser8KeysIterE"></span><span id="_CPPv2N12ConfigParser8KeysIterE"></span><span class="target" id="namespace_config_parser_1a8b334b0c98f04725442f3634e97669e5"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KeysIter</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12ConfigParser12StringVectorE" title="ConfigParser::StringVector"><span class="n"><span class="pre">StringVector</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">iterator</span></span><a class="headerlink" href="#_CPPv4N12ConfigParser8KeysIterE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser13ConstKeysIterE">
+<span id="_CPPv3N12ConfigParser13ConstKeysIterE"></span><span id="_CPPv2N12ConfigParser13ConstKeysIterE"></span><span class="target" id="namespace_config_parser_1a0d6b6bb585afad6bf1f87989e7dfdd89"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConstKeysIter</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12ConfigParser12StringVectorE" title="ConfigParser::StringVector"><span class="n"><span class="pre">StringVector</span></span></a><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">const_iterator</span></span><a class="headerlink" href="#_CPPv4N12ConfigParser13ConstKeysIterE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-enums">Enums</p>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser11ConfigErrorE">
+<span id="_CPPv3N12ConfigParser11ConfigErrorE"></span><span id="_CPPv2N12ConfigParser11ConfigErrorE"></span><span class="target" id="namespace_config_parser_1a0bd4459ac6751e6ce1f169390d4dc9d0"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConfigError</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser11ConfigErrorE" title="Link to this definition"></a><br /></dt>
+<dd><p>Defined error types used for file error checking. </p>
+<p>Enum class  </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser11ConfigError14FILE_NOT_FOUNDE">
+<span id="_CPPv3N12ConfigParser11ConfigError14FILE_NOT_FOUNDE"></span><span id="_CPPv2N12ConfigParser11ConfigError14FILE_NOT_FOUNDE"></span><span class="target" id="namespace_config_parser_1a0bd4459ac6751e6ce1f169390d4dc9d0acd54d99c8efb3c2db794197045f5b83c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FILE_NOT_FOUND</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser11ConfigError14FILE_NOT_FOUNDE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser11ConfigError15FILE_OPEN_ERRORE">
+<span id="_CPPv3N12ConfigParser11ConfigError15FILE_OPEN_ERRORE"></span><span id="_CPPv2N12ConfigParser11ConfigError15FILE_OPEN_ERRORE"></span><span class="target" id="namespace_config_parser_1a0bd4459ac6751e6ce1f169390d4dc9d0a08715903eca17abcd7ecdb74bc10aa4b"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FILE_OPEN_ERROR</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser11ConfigError15FILE_OPEN_ERRORE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser11ConfigError15FILE_READ_ERRORE">
+<span id="_CPPv3N12ConfigParser11ConfigError15FILE_READ_ERRORE"></span><span id="_CPPv2N12ConfigParser11ConfigError15FILE_READ_ERRORE"></span><span class="target" id="namespace_config_parser_1a0bd4459ac6751e6ce1f169390d4dc9d0a99303a4659e8a1a5fe2193a7a5019258"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FILE_READ_ERROR</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser11ConfigError15FILE_READ_ERRORE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser11ConfigError8NO_ERRORE">
+<span id="_CPPv3N12ConfigParser11ConfigError8NO_ERRORE"></span><span id="_CPPv2N12ConfigParser11ConfigError8NO_ERRORE"></span><span class="target" id="namespace_config_parser_1a0bd4459ac6751e6ce1f169390d4dc9d0ad306b6fdee05fe87455110ddf6501e6c"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NO_ERROR</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser11ConfigError8NO_ERRORE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser10ConfigTypeE">
+<span id="_CPPv3N12ConfigParser10ConfigTypeE"></span><span id="_CPPv2N12ConfigParser10ConfigTypeE"></span><span class="target" id="namespace_config_parser_1ac114dd608458b8594e1463f4f34890c5"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConfigType</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser10ConfigTypeE" title="Link to this definition"></a><br /></dt>
+<dd><p>Config data types. </p>
+<p>enum  </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser10ConfigType17CONFIG_EMPTY_LINEE">
+<span id="_CPPv3N12ConfigParser10ConfigType17CONFIG_EMPTY_LINEE"></span><span id="_CPPv2N12ConfigParser10ConfigType17CONFIG_EMPTY_LINEE"></span><span class="target" id="namespace_config_parser_1ac114dd608458b8594e1463f4f34890c5abab4a59763852166fab7703ee8e47be3"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CONFIG_EMPTY_LINE</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser10ConfigType17CONFIG_EMPTY_LINEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser10ConfigType14CONFIG_COMMENTE">
+<span id="_CPPv3N12ConfigParser10ConfigType14CONFIG_COMMENTE"></span><span id="_CPPv2N12ConfigParser10ConfigType14CONFIG_COMMENTE"></span><span class="target" id="namespace_config_parser_1ac114dd608458b8594e1463f4f34890c5a7ced0a0c6c268a7559059ffb72118963"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CONFIG_COMMENT</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser10ConfigType14CONFIG_COMMENTE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser10ConfigType14CONFIG_SECTIONE">
+<span id="_CPPv3N12ConfigParser10ConfigType14CONFIG_SECTIONE"></span><span id="_CPPv2N12ConfigParser10ConfigType14CONFIG_SECTIONE"></span><span class="target" id="namespace_config_parser_1ac114dd608458b8594e1463f4f34890c5aa7866d06111e8f6c0fc760768455df62"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CONFIG_SECTION</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser10ConfigType14CONFIG_SECTIONE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser10ConfigType12CONFIG_VALUEE">
+<span id="_CPPv3N12ConfigParser10ConfigType12CONFIG_VALUEE"></span><span id="_CPPv2N12ConfigParser10ConfigType12CONFIG_VALUEE"></span><span class="target" id="namespace_config_parser_1ac114dd608458b8594e1463f4f34890c5a590aedbeb3e8b5985fa31de39d853efb"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CONFIG_VALUE</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser10ConfigType12CONFIG_VALUEE" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN12ConfigParser4findEiRKNSt6vectorI9element_tEERK9element_t">
+<span id="_CPPv3I0EN12ConfigParser4findERKNSt6vectorI9element_tEERK9element_t"></span><span id="_CPPv2I0EN12ConfigParser4findERKNSt6vectorI9element_tEERK9element_t"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">element_t</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespace_config_parser_1a45fe635beea2fd3a0e5ab7ec7fe3e4a1"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">find</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN12ConfigParser4findEiRKNSt6vectorI9element_tEERK9element_t" title="ConfigParser::find::element_t"><span class="n"><span class="pre">element_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vectorContainer</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN12ConfigParser4findEiRKNSt6vectorI9element_tEERK9element_t" title="ConfigParser::find::element_t"><span class="n"><span class="pre">element_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN12ConfigParser4findEiRKNSt6vectorI9element_tEERK9element_t" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN12ConfigParser13removeElementEvRNSt6vectorI9element_tEERK9element_t">
+<span id="_CPPv3I0EN12ConfigParser13removeElementERNSt6vectorI9element_tEERK9element_t"></span><span id="_CPPv2I0EN12ConfigParser13removeElementERNSt6vectorI9element_tEERK9element_t"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">element_t</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="namespace_config_parser_1a2290df21bb90286bbec986a1f7a44584"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">removeElement</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN12ConfigParser13removeElementEvRNSt6vectorI9element_tEERK9element_t" title="ConfigParser::removeElement::element_t"><span class="n"><span class="pre">element_t</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">vectorContainer</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN12ConfigParser13removeElementEvRNSt6vectorI9element_tEERK9element_t" title="ConfigParser::removeElement::element_t"><span class="n"><span class="pre">element_t</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN12ConfigParser13removeElementEvRNSt6vectorI9element_tEERK9element_t" title="Link to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser9CfgParserE">
+<span id="_CPPv3N12ConfigParser9CfgParserE"></span><span id="_CPPv2N12ConfigParser9CfgParserE"></span><span id="ConfigParser::CfgParser"></span><span class="target" id="class_config_parser_1_1_cfg_parser"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CfgParser</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv412ConfigParser" title="ConfigParser"><span class="n"><span class="pre">ConfigParser</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N12ConfigParser6ParserE" title="ConfigParser::Parser"><span class="n"><span class="pre">Parser</span></span></a><a class="headerlink" href="#_CPPv4N12ConfigParser9CfgParserE" title="Link to this definition"></a><br /></dt>
+<dd><p>CFG file type <a class="reference internal" href="#class_config_parser_1_1_parser"><span class="std std-ref">Parser</span></a>, inherits from <a class="reference internal" href="#class_config_parser_1_1_parser"><span class="std std-ref">Parser</span></a> class. Provides functionality for and removing sections. Each section is a <a class="reference internal" href="#class_config_parser_1_1_config_section"><span class="std std-ref">ConfigSection</span></a> class which provides acces to it’s values. It is also possibel to loop through class sections as with values. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser9CfgParser9CfgParserENSt6stringE">
+<span id="_CPPv3N12ConfigParser9CfgParser9CfgParserENSt6stringE"></span><span id="_CPPv2N12ConfigParser9CfgParser9CfgParserENSt6stringE"></span><span id="ConfigParser::CfgParser::CfgParser__ss"></span><span class="target" id="class_config_parser_1_1_cfg_parser_1aa3f10dca55888a8fbb9179c7a53d5e8f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CfgParser</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_path</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser9CfgParser9CfgParserENSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>_path</strong> – Path to the configuration file. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser9CfgParserD0Ev">
+<span id="_CPPv3N12ConfigParser9CfgParserD0Ev"></span><span id="_CPPv2N12ConfigParser9CfgParserD0Ev"></span><span id="ConfigParser::CfgParser::~CfgParser"></span><span class="target" id="class_config_parser_1_1_cfg_parser_1a3256d23c08afac045b0428a7a58c2ba1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~CfgParser</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser9CfgParserD0Ev" title="Link to this definition"></a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser9CfgParser10addSectionENSt6stringE">
+<span id="_CPPv3N12ConfigParser9CfgParser10addSectionENSt6stringE"></span><span id="_CPPv2N12ConfigParser9CfgParser10addSectionENSt6stringE"></span><span id="ConfigParser::CfgParser::addSection__ss"></span><span class="target" id="class_config_parser_1_1_cfg_parser_1a51a16da9c2fcc309c3acfda7938f6863"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">addSection</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sectionName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser9CfgParser10addSectionENSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Adds a new section. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sectionName</strong> – Name of the section to add. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser9CfgParser13removeSectionERKNSt6stringE">
+<span id="_CPPv3N12ConfigParser9CfgParser13removeSectionERKNSt6stringE"></span><span id="_CPPv2N12ConfigParser9CfgParser13removeSectionERKNSt6stringE"></span><span id="ConfigParser::CfgParser::removeSection__ssCR"></span><span class="target" id="class_config_parser_1_1_cfg_parser_1a1efd6917e76d32d36e9bc9e071a6ad77"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">removeSection</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sectionName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser9CfgParser13removeSectionERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Removes a section. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sectionName</strong> – Name of the section to remove. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser9CfgParser7sectionERKNSt6stringE">
+<span id="_CPPv3N12ConfigParser9CfgParser7sectionERKNSt6stringE"></span><span id="_CPPv2N12ConfigParser9CfgParser7sectionERKNSt6stringE"></span><span id="ConfigParser::CfgParser::section__ssCR"></span><span class="target" id="class_config_parser_1_1_cfg_parser_1a34319807230066cbaec86a98efabb8b3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12ConfigParser13ConfigSectionE" title="ConfigParser::ConfigSection"><span class="n"><span class="pre">ConfigSection</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">section</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sectionName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser9CfgParser7sectionERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Retrieves a section. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>sectionName</strong> – Name of the section to retrieve. </p>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">out_of_range</span></span></span> – if section not found. </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Reference to the <a class="reference internal" href="#class_config_parser_1_1_config_section"><span class="std std-ref">ConfigSection</span></a>. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser9CfgParser8sectionsEv">
+<span id="_CPPv3N12ConfigParser9CfgParser8sectionsEv"></span><span id="_CPPv2N12ConfigParser9CfgParser8sectionsEv"></span><span id="ConfigParser::CfgParser::sections"></span><span class="target" id="class_config_parser_1_1_cfg_parser_1a2cd8fdf51720fb174217fe46e5c0cb5f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12ConfigParser12StringVectorE" title="ConfigParser::StringVector"><span class="n"><span class="pre">StringVector</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">sections</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser9CfgParser8sectionsEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Gets all section names. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Vector of section names. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser9CfgParser5clearEv">
+<span id="_CPPv3N12ConfigParser9CfgParser5clearEv"></span><span id="_CPPv2N12ConfigParser9CfgParser5clearEv"></span><span id="ConfigParser::CfgParser::clear"></span><span class="target" id="class_config_parser_1_1_cfg_parser_1a0bcf74990ec0309e73d6c91ca3485053"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clear</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser9CfgParser5clearEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Clears all sections and parser data. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser10ConfigLineE">
+<span id="_CPPv3N12ConfigParser10ConfigLineE"></span><span id="_CPPv2N12ConfigParser10ConfigLineE"></span><span id="ConfigParser::ConfigLine"></span><span class="target" id="struct_config_parser_1_1_config_line"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConfigLine</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser10ConfigLineE" title="Link to this definition"></a><br /></dt>
+<dd><p>Stores config data for reading/writing config files. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser13ConfigSectionE">
+<span id="_CPPv3N12ConfigParser13ConfigSectionE"></span><span id="_CPPv2N12ConfigParser13ConfigSectionE"></span><span id="ConfigParser::ConfigSection"></span><span class="target" id="class_config_parser_1_1_config_section"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConfigSection</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser13ConfigSectionE" title="Link to this definition"></a><br /></dt>
+<dd><p>Represents a configuration section with key-value pairs. </p>
+<p>Subclassed by <a class="reference internal" href="#class_config_parser_1_1_ini_parser"><span class="std std-ref">ConfigParser::IniParser</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN12ConfigParser13ConfigSection6insertEvNSt6stringE10value_type">
+<span id="_CPPv3I0EN12ConfigParser13ConfigSection6insertENSt6stringE10value_type"></span><span id="_CPPv2I0EN12ConfigParser13ConfigSection6insertENSt6stringE10value_type"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value_type</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="class_config_parser_1_1_config_section_1a919fefbab12dc0f6269565013c757162"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">insert</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">key</span></span>, <a class="reference internal" href="#_CPPv4I0EN12ConfigParser13ConfigSection6insertEvNSt6stringE10value_type" title="ConfigParser::ConfigSection::insert::value_type"><span class="n"><span class="pre">value_type</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN12ConfigParser13ConfigSection6insertEvNSt6stringE10value_type" title="Link to this definition"></a><br /></dt>
+<dd><p>Inserts a key-value pair if the key doesn’t exist. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – The key to insert. </p></li>
+<li><p><strong>value</strong> – The value to associate with the key. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser13ConfigSection3popERKNSt6stringE">
+<span id="_CPPv3N12ConfigParser13ConfigSection3popERKNSt6stringE"></span><span id="_CPPv2N12ConfigParser13ConfigSection3popERKNSt6stringE"></span><span id="ConfigParser::ConfigSection::pop__ssCR"></span><span class="target" id="class_config_parser_1_1_config_section_1af9170f244130ca33b98205c429ca74ac"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12ConfigParser11ConfigValueE" title="ConfigParser::ConfigValue"><span class="n"><span class="pre">ConfigValue</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pop</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser13ConfigSection3popERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Removes and returns the value associated with the key. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> – The key to remove. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The value associated with the key. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser13ConfigSection6removeERKNSt6stringE">
+<span id="_CPPv3N12ConfigParser13ConfigSection6removeERKNSt6stringE"></span><span id="_CPPv2N12ConfigParser13ConfigSection6removeERKNSt6stringE"></span><span id="ConfigParser::ConfigSection::remove__ssCR"></span><span class="target" id="class_config_parser_1_1_config_section_1af1928f1a6599955c63c03f1d409a736a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser13ConfigSection6removeERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Removes a key-value pair. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> – The key to remove. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN12ConfigParser13ConfigSection6updateEvRKNSt6stringE10value_type">
+<span id="_CPPv3I0EN12ConfigParser13ConfigSection6updateERKNSt6stringE10value_type"></span><span id="_CPPv2I0EN12ConfigParser13ConfigSection6updateERKNSt6stringE10value_type"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value_type</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="class_config_parser_1_1_config_section_1a4757726513ed21b0a24ab902ea452982"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">update</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">key</span></span>, <a class="reference internal" href="#_CPPv4I0EN12ConfigParser13ConfigSection6updateEvRKNSt6stringE10value_type" title="ConfigParser::ConfigSection::update::value_type"><span class="n"><span class="pre">value_type</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN12ConfigParser13ConfigSection6updateEvRKNSt6stringE10value_type" title="Link to this definition"></a><br /></dt>
+<dd><p>Updates the value of an existing key. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>key</strong> – The key to update. </p></li>
+<li><p><strong>value</strong> – The new value. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser13ConfigSection6existsERKNSt6stringE">
+<span id="_CPPv3N12ConfigParser13ConfigSection6existsERKNSt6stringE"></span><span id="_CPPv2N12ConfigParser13ConfigSection6existsERKNSt6stringE"></span><span id="ConfigParser::ConfigSection::exists__ssCR"></span><span class="target" id="class_config_parser_1_1_config_section_1a71c19acc57f727ad84f0ac3f62dca018"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">exists</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser13ConfigSection6existsERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Checks if a key exists. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> – The key to check. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if the key exists, false otherwise. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser13ConfigSection5clearEv">
+<span id="_CPPv3N12ConfigParser13ConfigSection5clearEv"></span><span id="_CPPv2N12ConfigParser13ConfigSection5clearEv"></span><span id="ConfigParser::ConfigSection::clear"></span><span class="target" id="class_config_parser_1_1_config_section_1abfba8e21089adbe927ce7352e74cc935"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clear</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser13ConfigSection5clearEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Clears all key-value pairs. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser13ConfigSection3getERKNSt6stringE">
+<span id="_CPPv3N12ConfigParser13ConfigSection3getERKNSt6stringE"></span><span id="_CPPv2N12ConfigParser13ConfigSection3getERKNSt6stringE"></span><span id="ConfigParser::ConfigSection::get__ssCR"></span><span class="target" id="class_config_parser_1_1_config_section_1acc448faa06b9e5b1ae82642f78335b9e"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12ConfigParser11ConfigValueE" title="ConfigParser::ConfigValue"><span class="n"><span class="pre">ConfigValue</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser13ConfigSection3getERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Gets the value associated with a key. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>key</strong> – The key to look up. </p>
+</dd>
+<dt class="field-even">Throws<span class="colon">:</span></dt>
+<dd class="field-even"><p><span><span class="cpp-expr sig sig-inline cpp"><span class="n">std</span><span class="p">::</span><span class="n">out_of_range</span></span></span> – if the key doesn’t exist. </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The value associated with the key. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser11ConfigValueE">
+<span id="_CPPv3N12ConfigParser11ConfigValueE"></span><span id="_CPPv2N12ConfigParser11ConfigValueE"></span><span id="ConfigParser::ConfigValue"></span><span class="target" id="class_config_parser_1_1_config_value"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConfigValue</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser11ConfigValueE" title="Link to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;ConfigParser.hpp&gt;</em></div>
+<p>Base class for managing value data, handles different DataTypes and uses std::string to store them. </p>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser9IniParserE">
+<span id="_CPPv3N12ConfigParser9IniParserE"></span><span id="_CPPv2N12ConfigParser9IniParserE"></span><span id="ConfigParser::IniParser"></span><span class="target" id="class_config_parser_1_1_ini_parser"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IniParser</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv412ConfigParser" title="ConfigParser"><span class="n"><span class="pre">ConfigParser</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N12ConfigParser6ParserE" title="ConfigParser::Parser"><span class="n"><span class="pre">Parser</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv412ConfigParser" title="ConfigParser"><span class="n"><span class="pre">ConfigParser</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N12ConfigParser13ConfigSectionE" title="ConfigParser::ConfigSection"><span class="n"><span class="pre">ConfigSection</span></span></a><a class="headerlink" href="#_CPPv4N12ConfigParser9IniParserE" title="Link to this definition"></a><br /></dt>
+<dd><div class="docutils container">
+<em>#include &lt;ConfigParser.hpp&gt;</em></div>
+<p>Ini config file type parser, inherits from both <a class="reference internal" href="#class_config_parser_1_1_config_section"><span class="std std-ref">ConfigSection</span></a> and <a class="reference internal" href="#class_config_parser_1_1_parser"><span class="std std-ref">Parser</span></a> classes. </p>
+<p><a class="reference internal" href="#class_config_parser_1_1_ini_parser"><span class="std std-ref">IniParser</span></a> class </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN12ConfigParser9IniParser6insertEvNSt6stringE10value_type">
+<span id="_CPPv3I0EN12ConfigParser9IniParser6insertENSt6stringE10value_type"></span><span id="_CPPv2I0EN12ConfigParser9IniParser6insertENSt6stringE10value_type"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">value_type</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="class_config_parser_1_1_ini_parser_1a3c48d344de33fdd222e94e90836b0b4b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">insert</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">key</span></span>, <a class="reference internal" href="#_CPPv4I0EN12ConfigParser9IniParser6insertEvNSt6stringE10value_type" title="ConfigParser::IniParser::insert::value_type"><span class="n"><span class="pre">value_type</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN12ConfigParser9IniParser6insertEvNSt6stringE10value_type" title="Link to this definition"></a><br /></dt>
+<dd><p>Function override from the <a class="reference internal" href="#class_config_parser_1_1_config_section"><span class="std std-ref">ConfigSection</span></a> class to handle line addition. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser9IniParser3popERKNSt6stringE">
+<span id="_CPPv3N12ConfigParser9IniParser3popERKNSt6stringE"></span><span id="_CPPv2N12ConfigParser9IniParser3popERKNSt6stringE"></span><span id="ConfigParser::IniParser::pop__ssCR"></span><span class="target" id="class_config_parser_1_1_ini_parser_1a88a12dd1f2888758df7783b9a97e5158"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12ConfigParser11ConfigValueE" title="ConfigParser::ConfigValue"><span class="n"><span class="pre">ConfigValue</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pop</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N12ConfigParser9IniParser3popERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Function override from the <a class="reference internal" href="#class_config_parser_1_1_config_section"><span class="std std-ref">ConfigSection</span></a> class to handle line removal. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser9IniParser6removeERKNSt6stringE">
+<span id="_CPPv3N12ConfigParser9IniParser6removeERKNSt6stringE"></span><span id="_CPPv2N12ConfigParser9IniParser6removeERKNSt6stringE"></span><span id="ConfigParser::IniParser::remove__ssCR"></span><span class="target" id="class_config_parser_1_1_ini_parser_1a45d070485a68eb1820e3a0b1322a2a31"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remove</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">key</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N12ConfigParser9IniParser6removeERKNSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Function override from the <a class="reference internal" href="#class_config_parser_1_1_config_section"><span class="std std-ref">ConfigSection</span></a> class to handle line removal. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser9IniParser5clearEv">
+<span id="_CPPv3N12ConfigParser9IniParser5clearEv"></span><span id="_CPPv2N12ConfigParser9IniParser5clearEv"></span><span id="ConfigParser::IniParser::clear"></span><span class="target" id="class_config_parser_1_1_ini_parser_1a51a9b91018451cc51ccccd23ebe17d63"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">clear</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N12ConfigParser9IniParser5clearEv" title="Link to this definition"></a><br /></dt>
+<dd><p>erases all keys and values. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser6ParserE">
+<span id="_CPPv3N12ConfigParser6ParserE"></span><span id="_CPPv2N12ConfigParser6ParserE"></span><span id="ConfigParser::Parser"></span><span class="target" id="class_config_parser_1_1_parser"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Parser</span></span></span><a class="headerlink" href="#_CPPv4N12ConfigParser6ParserE" title="Link to this definition"></a><br /></dt>
+<dd><p>Base class for existing parsers. Contains methods which must be overwriten to implement functionality. </p>
+<p>Subclassed by <a class="reference internal" href="#class_config_parser_1_1_cfg_parser"><span class="std std-ref">ConfigParser::CfgParser</span></a>, <a class="reference internal" href="#class_config_parser_1_1_ini_parser"><span class="std std-ref">ConfigParser::IniParser</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK12ConfigParser6Parser7getPathEv">
+<span id="_CPPv3NK12ConfigParser6Parser7getPathEv"></span><span id="_CPPv2NK12ConfigParser6Parser7getPathEv"></span><span id="ConfigParser::Parser::getPathC"></span><span class="target" id="class_config_parser_1_1_parser_1a61ad72183580e8490ccc8756b0314070"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">getPath</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK12ConfigParser6Parser7getPathEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Get the current path to the config file. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>REturns a constant std string for file path. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK12ConfigParser6Parser8getErrorEv">
+<span id="_CPPv3NK12ConfigParser6Parser8getErrorEv"></span><span id="_CPPv2NK12ConfigParser6Parser8getErrorEv"></span><span id="ConfigParser::Parser::getErrorC"></span><span class="target" id="class_config_parser_1_1_parser_1a7fdc998a16b5bbb58be3ab6c2409213a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N12ConfigParser11ConfigErrorE" title="ConfigParser::ConfigError"><span class="n"><span class="pre">ConfigError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getError</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK12ConfigParser6Parser8getErrorEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Retrieves currently imitted error code. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Returns a Config error enum state. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser6Parser5flushEv">
+<span id="_CPPv3N12ConfigParser6Parser5flushEv"></span><span id="_CPPv2N12ConfigParser6Parser5flushEv"></span><span id="ConfigParser::Parser::flush"></span><span class="target" id="class_config_parser_1_1_parser_1aa46a1714d63cfa91970807e08aaef767"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">flush</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser6Parser5flushEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Clears current eror state. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser6Parser4loadENSt6stringE">
+<span id="_CPPv3N12ConfigParser6Parser4loadENSt6stringE"></span><span id="_CPPv2N12ConfigParser6Parser4loadENSt6stringE"></span><span id="ConfigParser::Parser::load__ss"></span><span class="target" id="class_config_parser_1_1_parser_1a7ae8beff71dd4d207cc0d74aacc95891"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">load</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser6Parser4loadENSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Loads a config file. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>String, file</strong> – path. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser6Parser6reloadEv">
+<span id="_CPPv3N12ConfigParser6Parser6reloadEv"></span><span id="_CPPv2N12ConfigParser6Parser6reloadEv"></span><span id="ConfigParser::Parser::reload"></span><span class="target" id="class_config_parser_1_1_parser_1a5d7fc5f987fa169a74a785ae80e6dfc1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reload</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser6Parser6reloadEv" title="Link to this definition"></a><br /></dt>
+<dd><p>Reloads an opened config file. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N12ConfigParser6Parser4saveENSt6stringE">
+<span id="_CPPv3N12ConfigParser6Parser4saveENSt6stringE"></span><span id="_CPPv2N12ConfigParser6Parser4saveENSt6stringE"></span><span id="ConfigParser::Parser::save__ss"></span><span class="target" id="class_config_parser_1_1_parser_1aeb04aaa7c6792d4da9f90dccc9a2fbe0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">save</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_path</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N12ConfigParser6Parser4saveENSt6stringE" title="Link to this definition"></a><br /></dt>
+<dd><p>Writes config data to the file path. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>String, path</strong> – file, where file must be saved. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="examples.html" class="btn btn-neutral float-left" title="Examples" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Oussama Ben Gatrane.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
